@@ -1,0 +1,22 @@
+html {
+    font-size: 1rem;
+}
+
+body {
+    background-color: lightgoldenrodyellow; 
+}
+
+h1 {
+    color: darkviolet;
+    font-size: 3rem;
+}
+
+h2 {
+    color: darkviolet;
+    font-size: 2rem;
+}
+
+h3 {
+    color: darkviolet;
+    font-size: 1.5rem;
+}

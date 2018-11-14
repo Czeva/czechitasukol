@@ -1,0 +1,139 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+/* Globální */
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	
+}
+
+/* Header */
+.header-hlavni {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	padding: 0 20px;
+	background: lightgray;
+}
+
+.header-brand {
+	font-size: 25px;
+}
+
+.hlavni-navigace {
+	margin-left: auto;
+}
+
+.hlavni-navigace ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.hlavni-navigace a {
+	display: block;
+	font-size: 20px;
+	padding: 15px 15px;
+}
+
+/* Main */
+main {
+	padding: 0 20px;
+	padding-top: 100px;
+	padding-bottom: 30px;
+	display: flex;
+	align-items: flex-start;
+}
+
+/* Aside */
+
+aside {
+	width: 250px;
+	flex-shrink: 0;
+	padding: 15px;
+	margin-left: 50px;
+	border: 1px solid lightgray;
+}
+
+.sekundarni-navigace ul {
+	list-style: none;
+	padding: 0;
+	left: 0;
+}
+
+.sekundarni-navigace li {
+	font-size: 18px;
+	text-align: center;
+	border-bottom: 1px solid lightgray;
+}
+
+.sekundarni-navigace li:last-child {
+	border: none;
+}
+
+.sekundarni-navigace a {
+	display: block;
+	padding: 20px 20px;
+}
+
+.sekundarni-navigace a:hover {
+	background: lightgray;
+}
+
+/* Footer */
+footer {
+	padding: 30px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: lightgray;
+}
+
+.footer-copy {
+	font-weight: 700;
+}
+
+.footer-nav ul {
+	display: flex;
+}
+
+.footer-nav li {
+	margin-left: 20px;
+}
+
+.footer-nav a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+	main {
+		flex-direction: column;
+	}
+
+	aside {
+		order: -1;
+		width: 100%;
+		margin-left: 0;
+	}
+}
