@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <title>Soutez aut</title>
+
+</head>
+
+<body>
+    <div class="obsah">
+
+
+        <h1>Soutěž aut <span style="margin-left:50px;font-size:0.5em;font-style: italic;">(DÚ lekce 8 - Jitka E.)</span></h1>
+        <p>Lekce byla na <b>javascript</b>, tedy jsem se to pokoušela řešit přes něj, ale asi to nějak šlo dělat i přes
+            transitions - jen by se img musely oddělit do tříd a na každou napsat extra kyframes (?).</p>
+        <ul style="list-style-type:none;">
+            <li>animation: car1 1s infinite </li>
+            <li>=> @keyframes car1 {</li>
+            <li> from {left: 0px;}</li>
+            <li> to {left: 200px;}</li>
+            }
+        </ul>
+        <p>Auto 1 se
+            posune "od" 20px myslím, že je překlep a má být "o" 20px, jinak bych netušila význam.
+            <br />Posun jen o 20/30 px nebyl na stránce moc viditelný (pokud se nekliklo víckrát), svévolně jsem
+            změnila na 200 a 300 px.
+            <br />"Posun aut plynulý" - dala jsem jen ease, ale nevím, zda to je to, co se po mně chtělo - 
+            možná se mělo udělat navázání pohybu po několika klikách za sebou?</p>
+        <div>
+
+            <img src="car1.png" id="car1" style="position:absolute; top:240px"><br />
+            <img src="car2.png" id="car2" style="position:absolute; top:400px">
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // Zde budeme psát kód
+            // Načtu si elementy:
+            var src = $('#car1')
+            var src = $('#car2')
+
+            // Přidám reakce na události:
+            $(document).on('click', function () {
+                $("#car1").animate({ right: "-=200" }, 2000);
+                $("#car2").animate({ right: "-=300" }, 2000);
+            })
+            //Auto 1 se posune "OD" 20px myslím, že je překlep a má být "o" 20px, jinak bych netušila význam)
+            //Posun jen o 20-30px nebyl na stránce moc viditelný (pokud se nekliklo víckrát), svévolně jsem změnila na 200 a 300 px
+            //Zdroje: poznámky z hodiny + https://stackoverflow.com/questions/7957962/jquery-to-animate-image-from-left-to-right
+            //Vůbec netuším, k čemu jsou tam ty 2000, ale funguje, tedy neřeším :-)
+        })
+    </script>
+
+</body>
+
+</html>
