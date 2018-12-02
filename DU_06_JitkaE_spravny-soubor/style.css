@@ -1,0 +1,183 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+/* Globální */
+h1 {
+	font-size: 3rem;
+	color: pink;
+	margin-top: 5rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 2rem;
+	color: pink;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Header */
+.header-hlavni {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 20px 20px;
+	background: white;
+}
+
+.header-brand {
+	font-size: 25px;
+}
+
+.hlavni-navigace {
+	margin-right: auto;
+	justify-content: left;
+}
+
+.hlavni-navigace ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.hlavni-navigace a {
+	display: left;
+	font-size: 1.5rem;
+	padding: 15px 15px;
+	text-decoration: none;
+	color: navy;
+}
+
+/* Main */
+main {
+	padding: 0 20px;
+	padding-top: 100px;
+	padding-bottom: 30px;
+	display: flex;
+}
+
+.bckgrndimg {
+	background-image: img/pozadi.jpg;
+	width: 100%;
+}
+
+/* Odkazy */
+
+.odkazy {
+	width: 250px;
+	margin-left: 50px;
+	border: 1px solid lightgray;
+	display: inline-block;
+}
+
+.odkazy ul {
+	list-style: none;
+	padding: 0;
+	left: 0;
+}
+
+.odkazy li {
+	font-size: 18px;
+	text-align: center;
+	border-bottom: 1px solid lightgray;
+}
+
+.odkazy li:last-child {
+	border: none;
+}
+
+.odkazy a {
+	display: block;
+	padding: 20px 20px;
+}
+
+.odkazy a:hover {
+	background: lightgray;
+}
+
+/* bottom */
+bottom {
+	width: 290%;
+	display: flex;
+	padding: 15px;
+	margin-left: 50px;
+	color: navy;
+}
+
+.bottom a {
+	font-size: 1.5rem;
+	font-weight: bold;
+	border-bottom: 0;
+	color:navy;
+}
+
+.bottom li {
+	color: navy;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.bottom a:hover {
+	text-decoration: underline;
+
+}
+
+.bottom img {
+	size: 30px 30px;
+}
+
+/* Footer */
+footer {
+	padding: 20px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #0066ff;
+	color: white;
+}
+
+.footer {
+	font-weight: 700;
+	justify-content: center;
+}
+
+.footer-nav ul {
+	display: flex;
+}
+
+.footer-nav li {
+	margin-left: 20px;
+}
+
+.footer-nav a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+	main {
+		flex-direction: column;
+	}
+
+	aside {
+		order: -1;
+		width: 100%;
+		margin-left: 0;
+	}
+}

@@ -28,7 +28,7 @@
             posune "od" 20px myslím, že je překlep a má být "o" 20px, jinak bych netušila význam.
             <br />Posun jen o 20/30 px nebyl na stránce moc viditelný (pokud se nekliklo víckrát), svévolně jsem
             změnila na 200 a 300 px.
-            <br />"Posun aut plynulý" - dala jsem jen ease, ale nevím, zda to je to, co se po mně chtělo - 
+            <br />"Posun aut plynulý" - dala jsem jen ease, ale nevím, zda to je to, co se po mně chtělo -
             možná se mělo udělat navázání pohybu po několika klikách za sebou?</p>
         <div>
 
@@ -41,16 +41,29 @@
         crossorigin="anonymous"></script>
     <script>
         $(function () {
-            // Zde budeme psát kód
+            // Zde budeme psát kód - je až za obsahem stránky, tedy se spustí až po jejím načtení
             // Načtu si elementy:
             var src = $('#car1')
             var src = $('#car2')
+            var car1Position = 0
 
             // Přidám reakce na události:
             $(document).on('click', function () {
                 $("#car1").animate({ right: "-=200" }, 2000);
                 $("#car2").animate({ right: "-=300" }, 2000);
             })
+            //ALTERNATIVA:
+            car1.on(click'click', function () {
+                car1Position ´car1Position + 50
+                car1.css('transform', 'translateX(' + 50 + 'px)')
+            }
+            //ALTERNATIVA:
+                < style >
+                Img {
+                    dsiplay: block;
+                    transition: transform 2s;
+                }
+                < style />
             //Auto 1 se posune "OD" 20px myslím, že je překlep a má být "o" 20px, jinak bych netušila význam)
             //Posun jen o 20-30px nebyl na stránce moc viditelný (pokud se nekliklo víckrát), svévolně jsem změnila na 200 a 300 px
             //Zdroje: poznámky z hodiny + https://stackoverflow.com/questions/7957962/jquery-to-animate-image-from-left-to-right
